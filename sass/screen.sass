@@ -1,0 +1,56 @@
+
+
+@mixin size($w,$h:$w)
+	width: $w
+	height: $h
+
+html,body
+	+size(100%)
+	padding: 0px
+	margin: 0px
+	text-align: center
+	*
+		//border: 1px gray solid
+
+#app 
+	position: relative
+	
+	.banner
+		position: relative
+		display: inline-block
+		+size(100%,600px)
+		.bg
+			position: absolute
+			+size(100%)
+			top: 0px
+			left: 0px
+			z-index: -1
+		.title
+			display: inline-block
+			width: 100px
+			padding: 20px
+			margin-top: 200px
+			border: 1px solid
+
+	header
+		position: fixed
+		max-width: 1400px
+		+size(100%,80px)
+		z-index: 99
+		ul
+			display: inline-block
+			float: right
+			list-style: none
+			padding: 0px
+			li
+				display: inline-block
+				float: left
+				padding: 20px
+				a
+					text-decoration: none
+					color: #F9F8EB
+					cursor: pointer
+					font-size: 20px
+					transition: all 0.5s
+					&:hover
+						color: #FFE1B6
