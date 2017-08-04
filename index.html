@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="UTF-8">
 	<title>nanya</title>
@@ -13,13 +13,18 @@
 	<div id="app">
 		<my-header></my-header>
 		<div class="banner">
-			<img src="img/bg.png" alt="" class="bg">
+			<img src="img/white.jpg" alt="" id="bg">
 			<div class="title">
 				<h1>南</h1>
 				<h1>野</h1>
 			</div>
 		</div>
+		<plan-board>
+		</plan-board>
+		<member-board>
+		</member-board>
 	</div>
+
 	<template id = "header">
 		<header>
 			<ul>
@@ -28,7 +33,45 @@
 			</ul>
 		</header>
 	</template>
+
+	<template id = "plans">
+		<div id="plan-board">
+			<div class="title">Plans</div><br>
+			<hr>
+			<div class="container">
+				<div class="plan">
+					<img src="img/plan1.jpg" alt="">
+					<div class="filter">
+						<h3>巴克禮公園野餐</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+
+	<template id ="members">
+		<div id="members-board">
+			<div class="title">Members</div><br>
+			<hr>
+			<div class="container">
+				<div class="intro">
+					<img src="img/v2.png" alt="" class="all-members">
+					<div class="member-spot" v-for="(members,i) in members" v-on:mouseover="hover(i)" v-on:mouseleave="hover(i)" :class="'index'+i"></div>
+					<div class="member-box" v-for="(member,i) in members" :style="opacity(i)" :class="'member'+i">
+						<img :src="member.imgUrl" alt="">
+						<div class="self-intro">
+							<h3>{{member.name}}</h3>
+							<div class="description">
+								{{member.interests}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
 	<script src="https://unpkg.com/vue"></script>
 	<script src="js/app.js"></script>
+	<script src="js/effect.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ html, body {
   width: 100%;
   height: 600px;
 }
-#app .banner .bg {
+#app .banner #bg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -32,7 +32,7 @@ html, body {
 }
 #app header {
   position: fixed;
-  max-width: 1400px;
+  max-width: 1300px;
   width: 100%;
   height: 80px;
   z-index: 99;
@@ -50,11 +50,180 @@ html, body {
 }
 #app header ul li a {
   text-decoration: none;
-  color: #f9f8eb;
+  font-family: serif;
+  color: #a7b99e;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 15px;
   transition: all 0.5s;
 }
 #app header ul li a:hover {
-  color: #ffe1b6;
+  color: #535a3b;
+}
+
+#plan-board, #members-board {
+  display: inline-block;
+  max-width: 1300px;
+  width: calc(100% - 100px);
+  padding: 100px 50px 100px 50px;
+}
+#plan-board .title, #members-board .title {
+  display: inline-block;
+  float: left;
+  font-size: 30px;
+  font-family: serif;
+}
+#plan-board hr, #members-board hr {
+  width: 150px;
+  float: left;
+}
+#plan-board .container, #members-board .container {
+  display: flex;
+  width: 100%;
+  margin-top: 100px;
+}
+
+#plan-board .container .plan {
+  position: relative;
+  flex-grow: 1;
+  max-width: 280px;
+  height: 330px;
+}
+#plan-board .container .plan img {
+  width: 100%;
+  height: 100%;
+}
+#plan-board .container .plan .filter {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 38, 55, 0);
+  transition: all 0.5s;
+}
+#plan-board .container .plan .filter:hover {
+  background-color: rgba(39, 38, 55, 0.6);
+}
+#plan-board .container .plan .filter h3 {
+  color: white;
+  font-family: MingLiU;
+  align-self: center;
+}
+
+#members-board .container {
+  justify-content: center;
+}
+#members-board .container .intro {
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+#members-board .container .intro .all-members {
+  width: 100%;
+  height: 100%;
+}
+#members-board .container .intro .member-spot {
+  position: absolute;
+  top: 100px;
+  left: 55px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#members-board .container .intro .index0 {
+  top: 100px;
+  left: 55px;
+}
+#members-board .container .intro .index1 {
+  top: 230px;
+  left: 55px;
+}
+#members-board .container .intro .index2 {
+  top: 150px;
+  left: 275px;
+}
+#members-board .container .intro .index3 {
+  top: 155px;
+  left: 488px;
+}
+#members-board .container .intro .index4 {
+  top: 75px;
+  left: 227px;
+}
+#members-board .container .intro .index5 {
+  top: 85px;
+  left: 395px;
+}
+#members-board .container .intro .index6 {
+  top: 150px;
+  left: 340px;
+}
+#members-board .container .intro .index7 {
+  top: 135px;
+  left: 155px;
+}
+#members-board .container .intro .index8 {
+  top: 220px;
+  left: 250px;
+}
+#members-board .container .intro .member-box {
+  position: absolute;
+  display: flex;
+  width: 180px;
+  flex-direction: column;
+  transition: all 0.6s;
+}
+#members-board .container .intro .member-box * {
+  font-family: MingLiU;
+}
+#members-board .container .intro .member-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  align-self: center;
+  margin: 25px 0px 10px 0px;
+}
+#members-board .container .intro .member-box .self-intro {
+  border-top: 1px solid;
+  width: calc(100% - 20px);
+  padding: 10px;
+  align-self: center;
+}
+#members-board .container .intro .member-box .self-intro .description {
+  text-align: left;
+}
+#members-board .container .intro .member0 {
+  left: -200px;
+  top: 40px;
+}
+#members-board .container .intro .member1 {
+  left: -200px;
+  top: 200px;
+}
+#members-board .container .intro .member2 {
+  left: 270px;
+  top: -200px;
+}
+#members-board .container .intro .member3 {
+  right: -200px;
+  top: 140px;
+}
+#members-board .container .intro .member4 {
+  left: 220px;
+  top: -200px;
+}
+#members-board .container .intro .member5 {
+  right: -20px;
+  top: -120px;
+}
+#members-board .container .intro .member6 {
+  left: 270px;
+  top: -160px;
+}
+#members-board .container .intro .member7 {
+  left: 90px;
+  top: -170px;
 }
